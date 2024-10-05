@@ -28,10 +28,10 @@ services:
       - traefik-docker-stack_traefik_network
     labels:
       - traefik.enable=true
-      - traefik.http.routers.web.rule=Host(`${HOSTNAME}`)
-      - traefik.http.routers.web.entrypoints=websecure
-      - traefik.http.routers.web.tls=true
-      - traefik.http.routers.web.tls.certresolver=${CERTRESOLVER}
+      - traefik.http.routers.directus.rule=Host(`${HOSTNAME}`)
+      - traefik.http.routers.directus.entrypoints=websecure
+      - traefik.http.routers.directus.tls=true
+      - traefik.http.routers.directus.tls.certresolver=${CERTRESOLVER}
 networks:
   traefik-docker-stack_traefik_network:
     external: true
